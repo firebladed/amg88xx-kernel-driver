@@ -14,7 +14,9 @@ also exposed, please take a look at the [sysfs interface](#sysfs-interface) chap
 - [ ] complete the sysfs interface
 - [X] finish the devicetree overlay
 - [ ] add support for an "easier" interface (_/class/iio_ maybe?)
+- [ ] add Video4Linux support
 - [ ] write an example userspace application
+
 
 ## How to use
 First clone this reposity:
