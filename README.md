@@ -36,12 +36,11 @@ And load it with `dtoverlay`:
 
 ## Build and install using Dkms
 
-`cd amg88xx-kernel-driver`
-
 install dkms if missing
 `sudo apt install dkms`
 
 Build using dkms
+`cd amg88xx-kernel-driver`
 `sudo dkms build ./`
 
 Install using dkms
