@@ -21,10 +21,7 @@ First clone this reposity:
 
 `git clone https://github.com/vuorioi/amg88xx-kernel-driver.git`
 
-Then use the supplied `Makefile` to build the driver (make sure that you have the proper
-kernel headers installed):
-
-`cd amg88xx-kernel-driver && make`
+## Compile Devicetree
 
 In order for this driver to function properly the devicetree needs to have an entry
 for the amg88xx sensor. This repo provides a sample devicetree overlay for Raspberry.
@@ -37,9 +34,31 @@ And load it with `dtoverlay`:
 
 `sudo dtoverlay amg88xx.dtbo`
 
+## Build and install using Dkms
+
+`cd amg88xx-kernel-driver`
+
+install dkms if missing
+`sudo apt install dkms`
+
+Build using dkms
+`sudo dkms build ./`
+
+Install using dkms
+`sudo dkms install -m amg88xx-kernel-driver -v 0.1`
+
+
+## Build and install Manually
+Then use the supplied `Makefile` to build the driver (make sure that you have the proper
+kernel headers installed):
+
+`cd amg88xx-kernel-driver && make`
+
 Finally load the module:
 
 `sudo insmod amg88xx.ko`
+
+## Check Module loaded
 
 The sysfs entries are found in the `/sys/bus/i2c/device/<device_name>/` directory. You can find
 the right `device_name` by running the following command:
