@@ -21,7 +21,7 @@ also exposed, please take a look at the [sysfs interface](#sysfs-interface) chap
 ## How to use
 First clone this reposity:
 
-`git clone https://github.com/vuorioi/amg88xx-kernel-driver.git`
+`git clone https://github.com/firebladed/amg88xx-kernel-driver.git`
 
 ## Compile Devicetree
 
